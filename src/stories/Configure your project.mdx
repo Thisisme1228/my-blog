@@ -1,0 +1,92 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Configure your project" />
+
+# Using libraries or componets, including:
+
+## lucia
+>  an auth library written in TypeScript that abstracts away the complexity of handling sessions. It works alongside your database to provide an API that's easy to use, understand, and extend.
+
+## prisma
+
+## [react-query](https://tanstack.com/query/latest/docs/framework/react/overview)
+> it makes fetching, caching, synchronizing and updating server state in your web applications a breeze.
+
+## Tiptap 
+> Tiptap is a headless wrapper around ProseMirror – a toolkit for building rich text WYSIWYG editors, which is already in use at many well-known companies such as New York Times, The Guardian or Atlassian.
+
+## UploadThing
+> UploadThing is the easiest way to add file uploads to your full stack TypeScript application. 
+
+## Arctic
+> Arctic is an OAuth 2.0 library for JavaScript/TypeScript that supports numerous providers. It's light weight, fully-typed, and runtime-agnostic. 
+
+## date-fns
+> date-fns provides the most comprehensive, yet simple and consistent toolset for manipulating JavaScript dates in a browser & Node.js
+
+## ky
+>Ky is a tiny and elegant HTTP client based on the Fetch API
+
+## next-themes
+> Perfect Next.js dark mode in 2 lines of code. Support System preference and any other theme with no flashing
+
+## react-cropper
+> JavaScript image cropper
+
+## react-image-file-resizer
+> it is a react module that can rescaled local images
+
+## react-intersection-observer
+> React implementation of the Intersection Observer API to tell you when an element enters or leaves the viewport. Contains both a Hooks, render props and plain children implementation.
+
+## react-linkify-it
+> A tiny react package that turns urls (with i18n and emoji support), emails, jira tickets, twitter handles, anything you want! in your text clickable (aka linkify).
+
+## stream-chat
+> Official JavaScript SDK for Stream Chat
+
+## prettier
+> Prettier is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.use Prettier for formatting and linters for catching bugs!
+
+## eslint-config-prettier 
+> Turns off all rules that are unnecessary or might conflict with Prettier.
+```
+Add "prettier" to the "extends" array in your .eslintrc.* file. Make sure to put it last, so it gets the chance to override other configs.
+
+{
+  "extends": [
+    "some-other-config-you-use",
+    "prettier"
+  ]
+}
+```
+
+## prettier-plugin-tailwindcss
+> A Prettier v3+ plugin for Tailwind CSS v3.0+ that automatically sorts classes based on our recommended class order.
+```
+make new file named "prettier-plugin-tailwindcss" to root fold, and put below code in it to enable this plugin:
+module.exports = {
+    plugins: ["prettier-plugin-tailwindcss"],
+}
+```
+
+## shadcn-ui
+> Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.
+```
+customize theme:
+copy code from customizing theme to globals.css to replace the style of the same classname
+```
+
+## configuring the invalidation period of the client router cache
+```
+next.config.mjs
+
+const nextConfig = {
+    experimental: {
+        //staleTimes is an experimental feature that allows configuring the invalidation period of the client router cache.
+        staleTimes: {
+            dynamic: 30 //The dynamic property is used when the prefetch prop on Link is left unspecified.
+        }
+    }
+};
+```
