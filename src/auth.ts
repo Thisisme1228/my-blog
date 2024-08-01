@@ -9,7 +9,7 @@ const adapter = new PrismaAdapter(prisma.session, prisma.user);
 
 export const lucia = new Lucia(adapter, {
   sessionCookie: {
-    expires: false,// session cookies have very long lifespan (2 years)
+    expires: false, // session cookies have very long lifespan (2 years)
     attributes: {
       secure: process.env.NODE_ENV === "production",
     },
